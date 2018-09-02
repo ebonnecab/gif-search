@@ -26,7 +26,7 @@ var giphy = require('giphy-api')();
 
 app.get('/', function (req, res) {
     giphy.search(req.query.term, function (err, response) {
-        res.render('home', {gifs: response.data})
+        res.render('home', {gifs: response.data});
       });
     });
 app.use(express.static('public'));
